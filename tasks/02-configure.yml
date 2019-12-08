@@ -26,7 +26,7 @@
     creates: "{{ ansible_user_dir }}/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so"
     executable: /bin/bash
   when:
-    facter_os.name != "CentOS" or facter_os.release.major != "7"
+    ansible_distribution != "CentOS" or ansible_distribution_major_version != "7"
 
 - name: compile vim command-t
   shell: |
