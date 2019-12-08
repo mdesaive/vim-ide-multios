@@ -88,7 +88,7 @@ let g:syntastic_yaml_yamllint_args = '-c ' . shellescape($HOME . '/.yamllint')
 " let g:syntastic_python_checkers = ['pylint', 'python']
 let g:syntastic_python_checkers = ['flake8'] 
 {% else %}
-" let g:syntastic_python_checkers = ['pylint', 'python']
+let g:syntastic_python_checkers = ['pylint', 'flake8', 'python']
 {% endif %}
 let g:syntastic_sh_checkers = ['shellcheck', 'sh']
 
