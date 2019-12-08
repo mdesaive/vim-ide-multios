@@ -22,10 +22,8 @@
 #     var: hostvars[inventory_hostname]
 #     verbosity: 4
 
-  # - name: Install vim-ide-multios.
-  #   include: 01-packages.yml
-  # 
+- name: Install vim-ide-multios.
+  include: 01-packages.yml
+
 - name: Configure vim-ide-multios.
   include: 02-configure.yml
-
-

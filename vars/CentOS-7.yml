@@ -21,6 +21,7 @@ vim_ide_multios_1:
     - python36-pylint
     - python2-pylint
     - ShellCheck
+    - python-flake8
 # No YouCompleteMe for CentOS-7
   vim_modules:
     syntastic: 'https://github.com/vim-syntastic/syntastic.git'
