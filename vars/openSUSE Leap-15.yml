@@ -19,6 +19,7 @@ vim_ide_multios_1:
     # - libselinux-python
     - python2-pylint
     - python3-pylint
+    - ShellCheck
   vim_modules:
     YouCompleteMe: 'https://github.com/Valloric/YouCompleteMe.git'
     syntastic: 'https://github.com/vim-syntastic/syntastic.git'
