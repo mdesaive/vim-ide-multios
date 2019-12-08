@@ -1,0 +1,31 @@
+---
+# tasks file for vim-ide-multios
+- name: gather os specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}-{{ ansible_distribution_version}}.yml" # For OpenSuSE Leap ansible_distribution_major_version is NA
+    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version}}.yml"
+    - "{{ ansible_distribution }}.yml"
+  tags:
+    - always
+
+- name: Include os independent variables.
+  include_vars: "vars/main.yml"
+
+- name: Display all variables/facts known for a host
+  debug:
+    var: hostvars[inventory_hostname]
+  tags: debug_info
+
+# - name: Display all variables/facts known for a host
+#   debug:
+#     var: hostvars[inventory_hostname]
+#     verbosity: 4
+
+- name: Install vim-ide-multios.
+  include: 01-packages.yml
+
+- name: Configure vim-ide-multios.
+  include: 02-configure.yml
+
+

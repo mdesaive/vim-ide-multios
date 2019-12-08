@@ -1,0 +1,18 @@
+vim_ide_multios_1:
+  dest_vimrc: /etc/vim/vimrc
+  packages:
+    - vim
+    - python-passlib
+    - powerline
+    - vim-nox
+    - puppet
+    - puppet-lint
+    - build-essential
+    - cmake
+    - python-dev
+    - python3-dev
+    - python-pip
+    - yamllint
+    - ruby-dev
+    - pylint3
+    - pylint
