@@ -15,7 +15,7 @@
     clone: yes
     update: yes
     accept_hostkey: yes
-  with_dict: "{{ vim_ide_multios_2.vim_modules }}"
+  with_dict: "{{ vim_ide_multios_1.vim_modules }}"
 
 - name: compile vim autocomplete
   shell: |
@@ -25,6 +25,8 @@
     chdir: "{{ ansible_user_dir }}/.vim/bundle/YouCompleteMe"
     creates: "{{ ansible_user_dir }}/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so"
     executable: /bin/bash
+  when:
+    facter_os.name != "CentOS" or facter_os.release.major != "7"
 
 - name: compile vim command-t
   shell: |
