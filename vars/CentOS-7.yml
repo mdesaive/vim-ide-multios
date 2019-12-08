@@ -1,0 +1,21 @@
+vim_ide_multios_1:
+  dest_vimrc: /etc/vim/vimrc
+  packages:
+    - vim
+    - python-passlib
+    # - powerline - Gibt nur aus GIT Repo https://gist.github.com/Semo/571fd39651de68ed14a4fea314586ec8
+    - puppet
+    - rubygem-puppet-lint
+    - make
+    - gcc
+    - cmake
+    - gcc-c++
+    - python-devel
+    - python3-devel
+    - python-pip
+    - python3-pip
+    - yamllint
+    - ruby-devel
+    - libselinux-python
+    - python36-pylint
+    - python2-pylint

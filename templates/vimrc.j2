@@ -83,6 +83,7 @@ set updatetime=1500
 " yamllint
 let g:syntastic_yaml_checkers = ['yamllint']
 let g:syntastic_yaml_yamllint_args = '-c ' . shellescape($HOME . '/.yamllint')
+let g:syntastic_python_checkers = ['pylint']
 
 " todo
 let g:VimTodoListsMoveItems = 0
@@ -94,4 +95,3 @@ let g:indentLine_color_term = 237
 set ignorecase
 set smartcase
 
-let g:syntastic_python_checkers = ['pylint']
