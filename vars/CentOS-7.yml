@@ -17,8 +17,10 @@ vim_ide_multios_1:
     - yamllint
     - ruby-devel
     - libselinux-python
+    - pylint
     - python36-pylint
     - python2-pylint
+    - ShellCheck
 # No YouCompleteMe for CentOS-7
   vim_modules:
     syntastic: 'https://github.com/vim-syntastic/syntastic.git'
