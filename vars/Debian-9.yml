@@ -12,10 +12,19 @@ vim_ide_multios_1:
     - python-dev
     - python3-dev
     - python-pip
+    - python3-pip
     - yamllint
     - ruby-dev
     - pylint3
     - pylint
+    - python-pytest-pylint
+    - python3-pytest-pylint
+    - flake8
+    - python-flake8
+    - python3-flake8
+    - python-pep8
+    - python3-pep8
+    - shellcheck
   vim_modules:
     syntastic: 'https://github.com/vim-syntastic/syntastic.git'
     tabular: 'https://github.com/godlygeek/tabular.git'

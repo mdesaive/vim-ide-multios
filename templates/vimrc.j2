@@ -83,7 +83,13 @@ set updatetime=1500
 " yamllint
 let g:syntastic_yaml_checkers = ['yamllint']
 let g:syntastic_yaml_yamllint_args = '-c ' . shellescape($HOME . '/.yamllint')
-let g:syntastic_python_checkers = ['pylint', 'python']
+{% if ansible_distribution == "Debian" %}
+" Debian vim does not support Python3 pylint
+" let g:syntastic_python_checkers = ['pylint', 'python']
+let g:syntastic_python_checkers = ['flake8'] 
+{% else %}
+" let g:syntastic_python_checkers = ['pylint', 'python']
+{% endif %}
 let g:syntastic_sh_checkers = ['shellcheck', 'sh']
 
 " todo
