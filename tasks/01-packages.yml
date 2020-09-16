@@ -4,7 +4,7 @@
 #     state: present
 
 # - name: Install some packages.
-#   package: name={{ item }} 
+#   package: name={{ item }}
 #   state: present
 #   with_items:
 #     - "{{ vim-ide-multios.packages }}"

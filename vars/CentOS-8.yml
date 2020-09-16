@@ -22,6 +22,7 @@ vim_ide_multios_1:
     # - python2-pylint - python3 ist jetzt Standard, python2 ist nicht mehr installiert.
     # - ShellCheck - muss ich mir anschauen, geht nur uber snap.
     - python3-flake8
+    - yamllint
   vim_modules:
     syntastic: 'https://github.com/vim-syntastic/syntastic.git'
     tabular: 'https://github.com/godlygeek/tabular.git'
