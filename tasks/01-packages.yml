@@ -10,8 +10,8 @@
 #     - "{{ vim-ide-multios.packages }}"
 #   become: true
 
-- name: Install some packages.
-  package:
-    name: "{{ item }}"
-    state: present
-  loop: "{{ vim_ide_multios_1.packages }}"
+# - name: Install some packages.
+#   package:
+#     name: "{{ item }}"
+#     state: present
+#   loop: "{{ vim_ide_multios_1.packages }}"
