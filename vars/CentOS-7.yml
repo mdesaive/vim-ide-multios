@@ -1,7 +1,6 @@
-vim_ide_multios_1:
-  dest_vimrc: /etc/vim/vimrc
-  packages:
-    - vim
+vim_ide_multios_dest_vimrc: /etc/vim/vimrc
+vim_ide_multios_packages:
+    - vim-enhanced
     - python-passlib
     # - powerline - Gibt nur aus GIT Repo https://gist.github.com/Semo/571fd39651de68ed14a4fea314586ec8
     - puppet
@@ -23,7 +22,7 @@ vim_ide_multios_1:
     - ShellCheck
     - python-flake8
 # No YouCompleteMe for CentOS-7
-  vim_modules:
+vim_ide_multios_vim_modules:
     syntastic: 'https://github.com/vim-syntastic/syntastic.git'
     tabular: 'https://github.com/godlygeek/tabular.git'
     vim-addon-manager-knwon-repositories: 'https://github.com/MarcWeber/vim-addon-manager-known-repositories.git'

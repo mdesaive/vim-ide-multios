@@ -15,7 +15,7 @@
     clone: yes
     update: yes
     accept_hostkey: yes
-  with_dict: "{{ vim_ide_multios_1.vim_modules }}"
+  with_dict: "{{ vim_ide_multios_vim_modules }}"
 
 - name: compile vim autocomplete
   shell: |

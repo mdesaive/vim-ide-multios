@@ -1,17 +1,18 @@
-# - name: Install packages for fole 'vim-ide-multios'
-#   package:
-#     name: "{{ pkg_vim }}"
-#     state: present
+#- name: Install packages for fole 'vim-ide-multios'
+#  package:
+#    name: "{{ pkg_vim }}"
+#    state: present
 
-# - name: Install some packages.
-#   package: name={{ item }}
-#   state: present
-#   with_items:
-#     - "{{ vim-ide-multios.packages }}"
-#   become: true
+- name: Install some packages.
+  package:
+    name: '{{ item }}'
+    state: present
+  with_items:
+    - '{{ vim_ide_multios_packages }}'
+  become: true
 
-# - name: Install some packages.
-#   package:
-#     name: "{{ item }}"
-#     state: present
-#   loop: "{{ vim_ide_multios_1.packages }}"
+  #- name: Install some packages.
+  #  package:
+  #    name: "{{ item }}"
+  #    state: present
+  #  loop: "{{ vim_ide_multios_1.packages }}"
