@@ -17,29 +17,28 @@
     accept_hostkey: yes
   with_dict: "{{ vim_ide_multios_vim_modules }}"
 
-- name: compile vim autocomplete
-  shell: |
-    git submodule update --init --recursive
-    ./install.py
-  args:
-    chdir: "{{ ansible_user_dir }}/.vim/bundle/YouCompleteMe"
-    creates: "{{ ansible_user_dir }}/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so"
-    executable: /bin/bash
-  when:
-    # ansible_distribution != "CentOS" or ansible_distribution_major_version != "7"
-    ansible_distribution != "CentOS"
-
-- name: compile vim command-t
-  shell: |
-    git submodule update --init --recursive
-    ruby extconf.rb
-    make
-  args:
-    chdir: "{{ ansible_user_dir }}/.vim/bundle/command-t/ruby/command-t/ext/command-t"
-    creates: "{{ ansible_user_dir }}/.vim/bundle/command-t/ruby/command-t/ext/command-t/ext.so"
-    executable: /bin/bash
-  when:
-    ansible_distribution != "CentOS" or ansible_distribution_major_version != "8"
+    # - name: compile vim autocomplete
+    #   shell: |
+    #     git submodule update --init --recursive
+    #     ./install.py
+    #   args:
+    #     chdir: "{{ ansible_user_dir }}/.vim/bundle/YouCompleteMe"
+    #     creates: "{{ ansible_user_dir }}/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so"
+    #     executable: /bin/bash
+    #   when:
+    #     ansible_distribution != "CentOS"
+    # 
+    # - name: compile vim command-t
+    #   shell: |
+    #     git submodule update --init --recursive
+    #     ruby extconf.rb
+    #     make
+    #   args:
+    #     chdir: "{{ ansible_user_dir }}/.vim/bundle/command-t/ruby/command-t/ext/command-t"
+    #     creates: "{{ ansible_user_dir }}/.vim/bundle/command-t/ruby/command-t/ext/command-t/ext.so"
+    #     executable: /bin/bash
+    #   when:
+    #     ansible_distribution != "CentOS" or ansible_distribution_major_version != "8"
 
 - name: generate templates
   template:
@@ -48,5 +47,5 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_gid }}"
     mode: 0600
-  with_items: "{{ vim_ide_multios_2.templates }}"
+  with_items: "{{ templates }}"
 

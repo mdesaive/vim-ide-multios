@@ -1,6 +1,4 @@
-vim_ide_multios_2:
-  test: "bla"
-  templates:
+templates:
      - puppet-lint.rc
      - yamllint
      - vimrc

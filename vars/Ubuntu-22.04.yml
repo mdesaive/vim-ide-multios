@@ -1,0 +1,43 @@
+vim_ide_multios_dest_vimrc: /etc/vim/vimrc
+vim_ide_multios_packages:
+    - vim
+    - python3-passlib
+    - powerline
+    - vim-nox
+    - puppet
+    - puppet-lint
+    - build-essential
+    - cmake
+    - python3-dev
+    - python-pip
+    - python3-pip
+    - yamllint
+    - ruby-dev
+    - pylint
+    - python3-pytest-pylint
+    - flake8
+    - python3-flake8
+    - python3-pep8
+    - shellcheck
+vim_ide_multios_vim_modules:
+    syntastic: 'https://github.com/vim-syntastic/syntastic.git'
+    tabular: 'https://github.com/godlygeek/tabular.git'
+    vim-addon-manager-knwon-repositories: 'https://github.com/MarcWeber/vim-addon-manager-known-repositories.git'
+    vim-airline: 'https://github.com/vim-airline/vim-airline.git'
+    vim-airline-themes: 'https://github.com/vim-airline/vim-airline-themes.git'
+    vim-fugitive: 'https://github.com/tpope/vim-fugitive.git'
+    vim-puppet: 'https://github.com/rodjek/vim-puppet.git'
+    onedark: 'https://github.com/joshdick/onedark.vim.git'
+    nerdtree: 'https://github.com/scrooloose/nerdtree.git'
+    vim-surround: 'https://github.com/tpope/vim-surround.git'
+    vim-gitgutter: 'https://github.com/airblade/vim-gitgutter.git'
+    # YouCompleteMe: 'https://github.com/Valloric/YouCompleteMe.git'
+    ultisnips: 'https://github.com/SirVer/ultisnips'
+    vim-snippets: 'https://github.com/honza/vim-snippets'
+    vim-bufferline: 'https://github.com/bling/vim-bufferline'
+    vim-eunuch: 'https://github.com/tpope/vim-eunuch'
+    vim-todo-list: 'https://github.com/aserebryakov/vim-todo-lists.git'
+    indentLine: 'https://github.com/Yggdroot/indentLine.git'
+    vim-janitor: 'https://github.com/kuoe0/vim-janitor.git'
+    command-t: 'https://github.com/wincent/command-t.git'
+

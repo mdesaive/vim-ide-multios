@@ -1,5 +1,15 @@
 ---
 # tasks file for vim-ide-multios
+- name: Display all variables/facts known for a host
+  debug:
+    var: hostvars[inventory_hostname]
+    verbosity: 4
+
+- name: Display all variables/facts known for a host
+  debug:
+    var: hostvars[inventory_hostname]
+  tags: debug_info
+
 - name: gather os specific variables
   include_vars: "{{ item }}"
   with_first_found:
@@ -11,16 +21,6 @@
 
 - name: Include os independent variables.
   include_vars: "vars/main.yml"
-
-- name: Display all variables/facts known for a host
-  debug:
-    var: hostvars[inventory_hostname]
-  tags: debug_info
-
-# - name: Display all variables/facts known for a host
-#   debug:
-#     var: hostvars[inventory_hostname]
-#     verbosity: 4
 
 - name: Install vim-ide-multios.
   include: 01-packages.yml

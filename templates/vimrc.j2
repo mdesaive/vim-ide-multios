@@ -27,16 +27,16 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Theme and colors
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'onedark'
-let g:onedark_terminal_italics = 1
-let g:onedark_color_overrides = {
-\ "black": {"gui": "#2F343F", "cterm": "233", "cterm16": "0" },
-\ "comment_grey": {"gui": "#2F343F", "cterm": "238", "cterm16": "0" },
-\ "blue": {"gui": "#2F343F", "cterm": "144", "cterm16": "0" },
-\}
-colorscheme onedark
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline_theme = 'onedark'
+" let g:onedark_terminal_italics = 1
+" let g:onedark_color_overrides = {
+" \ "black": {"gui": "#2F343F", "cterm": "233", "cterm16": "0" },
+" \ "comment_grey": {"gui": "#2F343F", "cterm": "238", "cterm16": "0" },
+" \ "blue": {"gui": "#2F343F", "cterm": "144", "cterm16": "0" },
+" \}
+colorscheme koehler
 
 " ruby lint
 let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of .* in void context'}
