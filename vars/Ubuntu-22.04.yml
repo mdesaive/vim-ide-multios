@@ -31,7 +31,7 @@ vim_ide_multios_vim_modules:
     nerdtree: 'https://github.com/scrooloose/nerdtree.git'
     vim-surround: 'https://github.com/tpope/vim-surround.git'
     vim-gitgutter: 'https://github.com/airblade/vim-gitgutter.git'
-    # YouCompleteMe: 'https://github.com/Valloric/YouCompleteMe.git'
+    YouCompleteMe: 'https://github.com/Valloric/YouCompleteMe.git'
     ultisnips: 'https://github.com/SirVer/ultisnips'
     vim-snippets: 'https://github.com/honza/vim-snippets'
     vim-bufferline: 'https://github.com/bling/vim-bufferline'
